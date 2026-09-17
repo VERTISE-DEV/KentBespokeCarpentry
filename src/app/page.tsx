@@ -11,7 +11,7 @@ import heroImageMobile from "../../public/assets/garden-bar.jpg";
 
 export const metadata: Metadata = {
   title: { absolute: "Carpentry & Joinery in Kent | First Fix, Second Fix & Bespoke" },
-  description: "First fix, second fix and bespoke joinery across Kent. Fifteen years established, fully insured, 5 star reviewed on Checkatrade. Free site visit and a fixed quote.",
+  description: "First fix, second fix and bespoke joinery across Kent and the South East. Family run, fifteen years established, 5 star reviewed on Checkatrade. Free site visit and a fixed quote.",
   alternates: { canonical: "/" },
   openGraph: { title: "Carpentry & Joinery in Kent | Kent Bespoke Carpentry", url: "/" },
 };
@@ -28,7 +28,7 @@ export default function HomePage() {
         objectPositionMobile="50% 38%"
         sub="Fifteen years of first fix, second fix and bespoke joinery across Kent."
         reviews
-        trust={["15 years", "Fully insured", "Fixed quotes"]}
+        trust={["15 years", "Family run", "Fixed quotes"]}
         words={[
           { text: "First", delay: 0.55 },
           { text: "fix", delay: 0.65 },
@@ -43,11 +43,15 @@ export default function HomePage() {
           Every stage of the carpentry,<br /><span className="light">by one team.</span>
         </h2>
         <p className="lede d15" data-reveal="">
-          We carry out the structural first fix, the second fix finishing and the bespoke joinery in between. Each project is measured on site, priced as a fixed quote, and completed by the carpenters who drew it, so the standard stays consistent from the frame through to the final coat.
+          We carry out the <Link className="ilink" href="/services/first-fix-carpentry">structural first fix</Link>, the{" "}
+          <Link className="ilink" href="/services/second-fix-carpentry">second fix finishing</Link> and the{" "}
+          <Link className="ilink" href="/services/bespoke-joinery">bespoke joinery</Link> in between, for{" "}
+          <Link className="ilink" href="/residential">homeowners</Link> and{" "}
+          <Link className="ilink" href="/commercial">main contractors</Link> alike. Each project is measured on site, priced as a fixed quote, and completed by the carpenters who drew it, so the standard stays consistent from the frame through to the final coat.
         </p>
         <div className="creds d2" data-reveal="">
           <span>{CREDENTIALS.yearsWord} years established</span>
-          <span>{CREDENTIALS.insurance}</span>
+          <span>{CREDENTIALS.family}</span>
           <Checkatrade />
         </div>
       </section>

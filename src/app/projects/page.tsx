@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Banner } from "@/components/Banner";
 import { ProjectCard } from "@/components/ProjectCard";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { SERVICE_PAGES } from "@/lib/services";
 import { PROJECTS } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -24,6 +26,16 @@ export default function ProjectsPage() {
           ))}
         </div>
       </section>
+      <RelatedLinks
+        heading="Explore by type of work"
+        lead="Projects are split by who the work was for and by the stage of carpentry involved."
+        items={[
+          { href: "/residential", label: "Residential", note: "Work in people's homes" },
+          { href: "/commercial", label: "Commercial", note: "Contractors and landlords" },
+          ...SERVICE_PAGES.map((s) => ({ href: `/services/${s.slug}`, label: s.label, note: s.eyebrow })),
+        ]}
+      />
+
       <Banner title="Something similar in mind?" sub="We'd like to hear about it." />
     </>
   );

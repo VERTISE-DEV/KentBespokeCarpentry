@@ -28,7 +28,10 @@ export function Footer() {
           <a className="footer__credit" href="https://claimyour.website" target="_blank" rel="noopener noreferrer">Website by VERTISE Studios</a>
         </div>
         <div>
+          <Link href="/residential">Residential</Link>
+          <Link href="/commercial">Commercial</Link>
           <Link href="/projects">Projects</Link>
+          <Link href="/areas">Areas</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
         </div>

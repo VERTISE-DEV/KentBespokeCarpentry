@@ -43,6 +43,8 @@ export const NAP = {
 export const CREDENTIALS = {
   years: 15,
   yearsWord: "Fifteen",
+  family: "Family run",
+  /** Kept for the About page, where the detail belongs. Not shown on the homepage. */
   insurance: "Public liability insured",
 } as const;
 
@@ -80,6 +82,8 @@ export const AREAS_SERVED = [
 
 export type Project = {
   slug: string;
+  /** Which sector page this project appears on. */
+  sector: "residential" | "commercial";
   src: string;
   alt: string;
   type: string;
@@ -90,12 +94,12 @@ export type Project = {
 };
 
 export const PROJECTS: Project[] = [
-  { slug: "slatted-pergola-deck", src: "/assets/pergola-deck.jpg", alt: "Pergola with slatted screens over raised decking", type: "Garden structure", title: "Slatted pergola & deck", num: "01", width: 1080, height: 1350 },
-  { slug: "recessed-media-wall", src: "/assets/media-wall.jpg", alt: "Bespoke media wall with lit display niches and herringbone floor", type: "Media wall", title: "Recessed media wall", num: "02", width: 1152, height: 1213 },
-  { slug: "glass-balustrade-staircase", src: "/assets/staircase.jpg", alt: "Softwood staircase with glass balustrade", type: "Staircase", title: "Glass-balustrade staircase", num: "03", width: 1080, height: 1350 },
-  { slug: "covered-garden-bar", src: "/assets/garden-bar.jpg", alt: "Timber garden bar with hatch and slatted front", type: "Garden structure", title: "Covered garden bar", num: "04", width: 1536, height: 2048 },
-  { slug: "octagonal-pergola", src: "/assets/pergola-octagon.jpg", alt: "Octagonal pergola frame over composite decking", type: "Garden structure", title: "Octagonal pergola", num: "05", width: 1080, height: 1440 },
-  { slug: "fireplace-alcove-wall", src: "/assets/fireplace-wall.jpg", alt: "Fireplace media wall with lit alcoves and cupboards", type: "Media wall", title: "Fireplace & alcove wall", num: "06", width: 942, height: 677 },
+  { slug: "slatted-pergola-deck", sector: "residential", src: "/assets/pergola-deck.jpg", alt: "Pergola with slatted screens over raised decking", type: "Garden structure", title: "Slatted pergola & deck", num: "01", width: 1080, height: 1350 },
+  { slug: "recessed-media-wall", sector: "residential", src: "/assets/media-wall.jpg", alt: "Bespoke media wall with lit display niches and herringbone floor", type: "Media wall", title: "Recessed media wall", num: "02", width: 1152, height: 1213 },
+  { slug: "glass-balustrade-staircase", sector: "residential", src: "/assets/staircase.jpg", alt: "Softwood staircase with glass balustrade", type: "Staircase", title: "Glass-balustrade staircase", num: "03", width: 1080, height: 1350 },
+  { slug: "covered-garden-bar", sector: "residential", src: "/assets/garden-bar.jpg", alt: "Timber garden bar with hatch and slatted front", type: "Garden structure", title: "Covered garden bar", num: "04", width: 1536, height: 2048 },
+  { slug: "octagonal-pergola", sector: "residential", src: "/assets/pergola-octagon.jpg", alt: "Octagonal pergola frame over composite decking", type: "Garden structure", title: "Octagonal pergola", num: "05", width: 1080, height: 1440 },
+  { slug: "fireplace-alcove-wall", sector: "residential", src: "/assets/fireplace-wall.jpg", alt: "Fireplace media wall with lit alcoves and cupboards", type: "Media wall", title: "Fireplace & alcove wall", num: "06", width: 942, height: 677 },
 ];
 
 export type Service = { title: string; body: string; bg: string; fg: string };
