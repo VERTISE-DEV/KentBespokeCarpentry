@@ -32,8 +32,8 @@ export const SERVICE_PAGES: ServicePage[] = [
       "First fix carpentry across Kent and the South East: stud partitions, floor joists, roof carcassing, door linings and window boards. Family run, fifteen years established, fixed quotes.",
     intro:
       "First fix is the structural carpentry that goes in while a building is still open: the timber that carries loads, forms rooms and gives every trade after us something true to work to. It is finished long before anyone sees it, which is precisely why it has to be right.",
-    hero: "/assets/cut-roof-extension.jpg",
-    heroAlt: "Cut roof rafters framed off a blockwork extension before the finishing trades arrive",
+    hero: "/assets/extension-rafters.jpg",
+    heroAlt: "Lean-to extension rafters set off a wall plate before the finishing trades arrive",
     includes: [
       { group: "Floors and ceilings", items: ["Floor joists and joist hangers", "Noggins and strutting", "Chipboard and ply decking", "Ceiling joists and firrings", "Loft hatch openings"] },
       { group: "Walls and openings", items: ["Stud partitions, insulated or acoustic", "Door linings and casings", "Window boards and sub-frames", "Structural timber to engineer's detail", "Pattressing for fixings and brackets"] },
