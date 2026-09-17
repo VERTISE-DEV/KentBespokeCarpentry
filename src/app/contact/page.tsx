@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { Checkatrade } from "@/components/Checkatrade";
 import { ContactForm } from "@/components/ContactForm";
 import { NAP } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact: book a free visit or get a quote",
-  description: "Tell Kent Bespoke Carpentry about your project. Call 07494 280614, email sales@kentbespokecarpentry.co.uk, or send an enquiry and we'll reply within one working day.",
+  description: "Tell Kent Bespoke Carpentry about your project, whether first fix, second fix or bespoke joinery. Call 07494 280614 or email sales@kentbespokecarpentry.co.uk for a reply within one working day.",
   alternates: { canonical: "/contact" },
   openGraph: { title: "Contact Kent Bespoke Carpentry", url: "/contact" },
 };
@@ -19,6 +20,7 @@ export default function ContactPage() {
             <div className="d1" data-reveal=""><span className="label">Phone</span><a href={NAP.phoneHref}>{NAP.phoneDisplay}</a></div>
             <div className="d2" data-reveal=""><span className="label">Email</span><a href={NAP.emailHref}>{NAP.email}</a></div>
             <div className="d3" data-reveal=""><span className="label">Area</span><span className="val">Homes across Kent</span></div>
+            <div className="d3" data-reveal=""><span className="label">Reviews</span><Checkatrade variant="block" /></div>
           </div>
         </div>
         <ContactForm />

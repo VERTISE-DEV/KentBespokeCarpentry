@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 import { Parallax } from "@/components/Parallax";
 import { RevealObserver } from "@/components/RevealObserver";
 import { UiProvider } from "@/components/UiProvider";
-import { NAP, OFFERS, SITE_URL } from "@/lib/site";
+import { AREAS_SERVED, CHECKATRADE, CREDENTIALS, NAP, OFFERS, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 // Only the three weights actually rendered (300/400/500). Self-hosted at build time by next/font.
@@ -14,8 +14,8 @@ const montserrat = Montserrat({ subsets: ["latin"], weight: ["300", "400", "500"
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: "Kent Bespoke Carpentry Ltd | Bespoke joinery, made in Kent", template: "%s | Kent Bespoke Carpentry" },
-  description: "Kent Bespoke Carpentry design, build and install bespoke joinery across Kent: media walls, staircases, pergolas, garden rooms and fitted furniture.",
+  title: { default: "Carpentry & Joinery in Kent | Kent Bespoke Carpentry Ltd", template: "%s | Kent Bespoke Carpentry" },
+  description: "First fix, second fix and bespoke joinery across Kent. Fifteen years established, fully insured and 5 star reviewed on Checkatrade. Free site visit and a fixed quote.",
   applicationName: NAP.name,
   openGraph: { type: "website", locale: "en_GB", siteName: NAP.name, url: SITE_URL },
   twitter: { card: "summary_large_image" },
@@ -35,9 +35,18 @@ const jsonLd = {
   image: `${SITE_URL}/opengraph-image`,
   logo: `${SITE_URL}/assets/logo-navy.png`,
   address: { "@type": "PostalAddress", addressRegion: "Kent", addressCountry: "GB" },
-  areaServed: { "@type": "AdministrativeArea", name: "Kent" },
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "Kent" },
+    ...AREAS_SERVED.map((name) => ({ "@type": "City", name, address: { "@type": "PostalAddress", addressRegion: "Kent", addressCountry: "GB" } })),
+  ],
   priceRange: "££",
-  sameAs: [NAP.facebook, NAP.instagram],
+  foundingDate: String(new Date().getFullYear() - CREDENTIALS.years),
+  sameAs: [NAP.facebook, NAP.instagram, CHECKATRADE.url],
+  // Only emitted once a verified review count exists: Google requires reviewCount alongside
+  // ratingValue, and an invented figure is a structured-data violation.
+  ...(CHECKATRADE.reviewCount
+    ? { aggregateRating: { "@type": "AggregateRating", ratingValue: CHECKATRADE.rating, bestRating: 5, reviewCount: CHECKATRADE.reviewCount } }
+    : {}),
   makesOffer: OFFERS.map((name) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name, areaServed: "Kent" } })),
 };
 

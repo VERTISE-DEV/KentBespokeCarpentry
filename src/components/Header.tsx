@@ -11,7 +11,10 @@ import { useUi } from "./UiProvider";
 
 const LINKS = [
   { href: "/", label: "Home" },
+  { href: "/residential", label: "Residential" },
+  { href: "/commercial", label: "Commercial" },
   { href: "/projects", label: "Projects" },
+  { href: "/areas", label: "Areas" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
