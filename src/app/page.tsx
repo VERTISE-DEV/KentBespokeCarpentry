@@ -4,6 +4,7 @@ import { Banner } from "@/components/Banner";
 import { Hero } from "@/components/Hero";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Showcase } from "@/components/Showcase";
+import { Checkatrade } from "@/components/Checkatrade";
 import { PROJECTS } from "@/lib/site";
 import heroImage from "../../public/assets/pergola-deck.jpg";
 import heroImageMobile from "../../public/assets/garden-bar.jpg";
@@ -25,7 +26,8 @@ export default function HomePage() {
         eyebrow="Carpentry & joinery across Kent"
         mobileSrc={heroImageMobile}
         objectPositionMobile="50% 38%"
-        sub="First fix, second fix and bespoke joinery, all from one team."
+        sub="First fix, second fix and bespoke joinery for homes across Kent."
+        reviews
         trust={["Free visit", "Fixed quote", "One team"]}
         words={[
           { text: "First", delay: 0.55 },
@@ -38,11 +40,12 @@ export default function HomePage() {
 
       <section className="section intro" aria-labelledby="intro-h">
         <h2 id="intro-h" className="h-md" data-reveal="" style={{ maxWidth: "22ch" }}>
-          One carpenter for<br /><span className="light">the whole job.</span>
+          The whole job,<br /><span className="light">not just the visible bit.</span>
         </h2>
         <p className="lede d15" data-reveal="">
-          Structural first fix, the second fix finish that everyone actually sees, and bespoke pieces made to measure. We cover every carpentry stage of a project, so you are not chasing three different trades to get one room finished.
+          Most carpenters take one end of a job. We do the stud walls and joists that disappear behind the plaster, the doors and skirting you look at every day, and the bespoke pieces in between. One team, one number to call, from the frame to the final coat.
         </p>
+        <div className="d2" data-reveal=""><Checkatrade /></div>
       </section>
 
       <Showcase />

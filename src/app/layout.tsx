@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 import { Parallax } from "@/components/Parallax";
 import { RevealObserver } from "@/components/RevealObserver";
 import { UiProvider } from "@/components/UiProvider";
-import { AREAS_SERVED, NAP, OFFERS, SITE_URL } from "@/lib/site";
+import { AREAS_SERVED, CHECKATRADE, NAP, OFFERS, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 // Only the three weights actually rendered (300/400/500). Self-hosted at build time by next/font.
@@ -40,7 +40,12 @@ const jsonLd = {
     ...AREAS_SERVED.map((name) => ({ "@type": "City", name, address: { "@type": "PostalAddress", addressRegion: "Kent", addressCountry: "GB" } })),
   ],
   priceRange: "££",
-  sameAs: [NAP.facebook, NAP.instagram],
+  sameAs: [NAP.facebook, NAP.instagram, CHECKATRADE.url],
+  // Only emitted once a verified review count exists: Google requires reviewCount alongside
+  // ratingValue, and an invented figure is a structured-data violation.
+  ...(CHECKATRADE.reviewCount
+    ? { aggregateRating: { "@type": "AggregateRating", ratingValue: CHECKATRADE.rating, bestRating: 5, reviewCount: CHECKATRADE.reviewCount } }
+    : {}),
   makesOffer: OFFERS.map((name) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name, areaServed: "Kent" } })),
 };
 

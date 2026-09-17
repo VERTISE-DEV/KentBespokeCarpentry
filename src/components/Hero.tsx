@@ -1,6 +1,7 @@
 import type { StaticImageData } from "next/image";
 import { NAP } from "@/lib/site";
 import { BookButton } from "./BookButton";
+import { Checkatrade } from "./Checkatrade";
 import { HeroImage } from "./HeroImage";
 import { ChevronDown } from "./Icons";
 
@@ -22,9 +23,11 @@ type Props = {
   sub?: string;
   /** Short proof points under the mobile CTAs. Mobile only. */
   trust?: readonly string[];
+  /** Show the Checkatrade rating under the mobile CTAs. */
+  reviews?: boolean;
 };
 
-export function Hero({ src, alt, eyebrow, words, variant, objectPosition = "50% 42%", objectPositionMobile, mobileSrc, sub, trust }: Props) {
+export function Hero({ src, alt, eyebrow, words, variant, objectPosition = "50% 42%", objectPositionMobile, mobileSrc, sub, trust, reviews }: Props) {
   const home = variant === "home";
   return (
     <section className="hero" aria-labelledby="page-h1">
@@ -50,6 +53,7 @@ export function Hero({ src, alt, eyebrow, words, variant, objectPosition = "50% 
               <a className="pill pill--outline-white" href={NAP.phoneHref}>Call {NAP.phoneDisplay}</a>
             </div>
           )}
+          {home && reviews && <Checkatrade variant="block" className="hero__cat hide-d" />}
           {home && trust && trust.length > 0 && (
             <ul className="hero__trust hide-d">
               {trust.map((t) => <li key={t}>{t}</li>)}

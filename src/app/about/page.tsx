@@ -40,8 +40,8 @@ export default function AboutPage() {
         <div className="cols" style={{ gap: "clamp(24px,4vw,64px)", alignItems: "start" }}>
           <h2 id="story-h" className="h-md" data-reveal="">A small Kent team<br /><span className="light">that does the whole job.</span></h2>
           <div className="body-lg" style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-            <p className="d1" data-reveal="">Kent Bespoke Carpentry covers the full range of carpentry on a job. Structural first fix before the plasterer arrives, the second fix that finishes a room, and the bespoke pieces that make it yours. Same team, same standard, from the frame to the final coat.</p>
-            <p className="d2" data-reveal="">That means no hand-offs, no sub-contractor surprises, and one point of contact throughout. We work for homeowners directly and alongside builders and main contractors on larger projects, anywhere in Kent.</p>
+            <p className="d1" data-reveal="">We take the carpentry on a job from end to end. The first fix nobody ever sees, the second fix everybody does, and the bespoke pieces that make a room yours. Same hands on all three.</p>
+            <p className="d2" data-reveal="">No hand-offs, no sub-contractor surprises, one number to call. We work for homeowners directly, and alongside builders and main contractors on bigger projects, anywhere in Kent.</p>
           </div>
         </div>
       </section>

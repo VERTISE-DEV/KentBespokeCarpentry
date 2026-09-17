@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Checkatrade } from "@/components/Checkatrade";
 import { ContactForm } from "@/components/ContactForm";
 import { NAP } from "@/lib/site";
 
@@ -19,6 +20,7 @@ export default function ContactPage() {
             <div className="d1" data-reveal=""><span className="label">Phone</span><a href={NAP.phoneHref}>{NAP.phoneDisplay}</a></div>
             <div className="d2" data-reveal=""><span className="label">Email</span><a href={NAP.emailHref}>{NAP.email}</a></div>
             <div className="d3" data-reveal=""><span className="label">Area</span><span className="val">Homes across Kent</span></div>
+            <div className="d3" data-reveal=""><span className="label">Reviews</span><Checkatrade variant="block" /></div>
           </div>
         </div>
         <ContactForm />

@@ -11,7 +11,7 @@ const STEPS = [
   {
     n: "02 / Build", tone: "slide--white", src: "/assets/pergola-octagon.jpg", alt: "Timber frame under construction",
     title: "First fix, second fix and the bespoke pieces in between.",
-    copy: "Structural carpentry before the plasterer arrives, the finishing work that everyone actually sees, and one-off pieces made to measure. Workshop where we can, on site where we must, same standard either way.",
+    copy: "The structural work before the plasterer arrives, the finishing work after the decorator leaves, and the one-off pieces in between. Workshop where we can, on site where we must, same standard either way.",
     cta: { href: "/projects", label: "See recent builds", cls: "pill pill--navy" },
   },
   {

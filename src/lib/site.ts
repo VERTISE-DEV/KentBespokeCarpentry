@@ -33,6 +33,22 @@ export const NAP = {
   instagram: "https://www.instagram.com/kentbespokecarpentry?igsi=MTVzc3Z6ZGUwemU1Nw==",
 } as const;
 
+/**
+ * Checkatrade profile. `rating` and `reviewCount` are deliberately separate so they can be
+ * corrected in one place. Leave `reviewCount` null until the real figure is confirmed: the
+ * JSON-LD aggregateRating is only emitted when both are present, because Google treats an
+ * invented review count as a structured-data violation.
+ */
+export const CHECKATRADE = {
+  url: "https://www.checkatrade.com/trades/kentbespokecarpentryltd",
+  label: "5 star reviews on Checkatrade",
+  rating: 5,
+  reviewCount: null as number | null,
+} as const;
+
+/** Towns named in the footer for local search. Swap these for the areas actually covered. */
+export const AREAS_SHOWN = ["Maidstone", "Ashford", "Canterbury", "Sittingbourne", "Tonbridge"] as const;
+
 export const NAVY = "#0e2140";
 export const BLACK = "#0a0a0a";
 
