@@ -5,7 +5,7 @@ import { sectorBySlug } from "@/lib/sectors";
 const sector = sectorBySlug("commercial")!;
 
 export const metadata: Metadata = {
-  title: sector.title,
+  title: { absolute: sector.title },
   description: sector.description,
   alternates: { canonical: "/commercial" },
   openGraph: { title: sector.title, url: "/commercial" },

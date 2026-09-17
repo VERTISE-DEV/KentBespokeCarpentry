@@ -357,6 +357,26 @@ img { display: block; }
 .related__note { font-size: 14px; color: rgba(10,10,10,0.6); }
 .related__arrow { position: absolute; right: 20px; top: 20px; color: var(--navy); opacity: 0.5; transition: transform 0.25s, opacity 0.25s; }
 
+/* ---------- Area property mix ---------- */
+.mix { display: flex; flex-direction: column; gap: 28px; }
+.mix__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(20px, 2.5vw, 36px); }
+.mix__list li { display: flex; flex-direction: column; gap: 10px; border-top: 1px solid rgba(14,33,64,0.18); padding-top: 20px; }
+.mix__weight { align-self: flex-start; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; padding: 5px 11px; border-radius: 100px; }
+.mix__weight--dominant { background: var(--navy); color: #fff; }
+.mix__weight--common { background: var(--stone); color: var(--navy); }
+.mix__weight--pockets { background: transparent; color: rgba(10,10,10,0.55); border: 1px solid rgba(14,33,64,0.22); }
+.mix__list h3 { font-size: clamp(18px, 1.5vw, 22px); font-weight: 500; letter-spacing: -0.01em; }
+.mix__list p { font-size: 15px; line-height: 1.6; color: rgba(10,10,10,0.72); }
+
+/* ---------- Ranked local jobs ---------- */
+.jobs { display: flex; flex-direction: column; gap: 28px; }
+.jobs__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; counter-reset: job; }
+.jobs__list li { display: flex; gap: clamp(16px, 2.5vw, 36px); align-items: baseline; padding: clamp(20px, 2.2vw, 28px) 0; border-bottom: 1px solid rgba(14,33,64,0.14); }
+.jobs__list li:first-child { border-top: 1px solid rgba(14,33,64,0.14); }
+.jobs__n { font-size: clamp(28px, 3.4vw, 44px); font-weight: 300; color: rgba(14,33,64,0.28); line-height: 1; flex: none; min-width: 1.6em; }
+.jobs__list h3 { font-size: clamp(19px, 1.7vw, 26px); font-weight: 400; letter-spacing: -0.01em; margin-bottom: 8px; }
+.jobs__list p { font-size: 16px; line-height: 1.6; color: rgba(10,10,10,0.72); max-width: 60ch; }
+
 .hoods { display: flex; flex-direction: column; gap: 24px; }
 .hoods__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
 .hoods__list li {
@@ -535,6 +555,8 @@ img { display: block; }
   .projects__head { flex-direction: column; align-items: flex-start; }
   .prose { grid-template-columns: 1fr; }
   .related__grid { grid-template-columns: 1fr; }
+  .mix__list { grid-template-columns: 1fr; }
+  .jobs__list li { gap: 14px; }
   .crumb { padding-top: 88px; }
   .band__img { aspect-ratio: 4 / 3; }
 }
