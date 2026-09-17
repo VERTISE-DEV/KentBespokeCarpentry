@@ -5,13 +5,13 @@ import { Hero } from "@/components/Hero";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Showcase } from "@/components/Showcase";
 import { Checkatrade } from "@/components/Checkatrade";
-import { PROJECTS } from "@/lib/site";
+import { CREDENTIALS, PROJECTS } from "@/lib/site";
 import heroImage from "../../public/assets/pergola-deck.jpg";
 import heroImageMobile from "../../public/assets/garden-bar.jpg";
 
 export const metadata: Metadata = {
   title: { absolute: "Carpentry & Joinery in Kent | First Fix, Second Fix & Bespoke" },
-  description: "First fix and second fix carpentry plus bespoke joinery across Kent. Stud work, joists, doors, skirting, staircases, media walls, wardrobes and pergolas. Free visit, fixed quote.",
+  description: "First fix, second fix and bespoke joinery across Kent. Fifteen years established, fully insured, 5 star reviewed on Checkatrade. Free site visit and a fixed quote.",
   alternates: { canonical: "/" },
   openGraph: { title: "Carpentry & Joinery in Kent | Kent Bespoke Carpentry", url: "/" },
 };
@@ -23,12 +23,12 @@ export default function HomePage() {
         variant="home"
         src={heroImage}
         alt="Timber pergola and decking built by Kent Bespoke Carpentry"
-        eyebrow="Carpentry & joinery across Kent"
+        eyebrow="Carpentry and joinery across Kent"
         mobileSrc={heroImageMobile}
         objectPositionMobile="50% 38%"
-        sub="First fix, second fix and bespoke joinery for homes across Kent."
+        sub="Fifteen years of first fix, second fix and bespoke joinery across Kent."
         reviews
-        trust={["Free visit", "Fixed quote", "One team"]}
+        trust={["15 years", "Fully insured", "Fixed quotes"]}
         words={[
           { text: "First", delay: 0.55 },
           { text: "fix", delay: 0.65 },
@@ -39,13 +39,17 @@ export default function HomePage() {
       />
 
       <section className="section intro" aria-labelledby="intro-h">
-        <h2 id="intro-h" className="h-md" data-reveal="" style={{ maxWidth: "22ch" }}>
-          The whole job,<br /><span className="light">not just the visible bit.</span>
+        <h2 id="intro-h" className="h-md" data-reveal="" style={{ maxWidth: "24ch" }}>
+          Every stage of the carpentry,<br /><span className="light">by one team.</span>
         </h2>
         <p className="lede d15" data-reveal="">
-          Most carpenters take one end of a job. We do the stud walls and joists that disappear behind the plaster, the doors and skirting you look at every day, and the bespoke pieces in between. One team, one number to call, from the frame to the final coat.
+          We carry out the structural first fix, the second fix finishing and the bespoke joinery in between. Each project is measured on site, priced as a fixed quote, and completed by the carpenters who drew it, so the standard stays consistent from the frame through to the final coat.
         </p>
-        <div className="d2" data-reveal=""><Checkatrade /></div>
+        <div className="creds d2" data-reveal="">
+          <span>{CREDENTIALS.yearsWord} years established</span>
+          <span>{CREDENTIALS.insurance}</span>
+          <Checkatrade />
+        </div>
       </section>
 
       <Showcase />
@@ -62,7 +66,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Banner title="Got a job that needs a carpenter?" sub="Let's talk it through." />
+      <Banner title="Planning a project?" sub="Let's talk it through." />
     </>
   );
 }

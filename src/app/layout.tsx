@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 import { Parallax } from "@/components/Parallax";
 import { RevealObserver } from "@/components/RevealObserver";
 import { UiProvider } from "@/components/UiProvider";
-import { AREAS_SERVED, CHECKATRADE, NAP, OFFERS, SITE_URL } from "@/lib/site";
+import { AREAS_SERVED, CHECKATRADE, CREDENTIALS, NAP, OFFERS, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 // Only the three weights actually rendered (300/400/500). Self-hosted at build time by next/font.
@@ -15,7 +15,7 @@ const montserrat = Montserrat({ subsets: ["latin"], weight: ["300", "400", "500"
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: "Carpentry & Joinery in Kent | Kent Bespoke Carpentry Ltd", template: "%s | Kent Bespoke Carpentry" },
-  description: "First fix and second fix carpentry plus bespoke joinery across Kent. Media walls, staircases, fitted wardrobes, pergolas and decking. Free visit, fixed quote.",
+  description: "First fix, second fix and bespoke joinery across Kent. Fifteen years established, fully insured and 5 star reviewed on Checkatrade. Free site visit and a fixed quote.",
   applicationName: NAP.name,
   openGraph: { type: "website", locale: "en_GB", siteName: NAP.name, url: SITE_URL },
   twitter: { card: "summary_large_image" },
@@ -40,6 +40,7 @@ const jsonLd = {
     ...AREAS_SERVED.map((name) => ({ "@type": "City", name, address: { "@type": "PostalAddress", addressRegion: "Kent", addressCountry: "GB" } })),
   ],
   priceRange: "££",
+  foundingDate: String(new Date().getFullYear() - CREDENTIALS.years),
   sameAs: [NAP.facebook, NAP.instagram, CHECKATRADE.url],
   // Only emitted once a verified review count exists: Google requires reviewCount alongside
   // ratingValue, and an invented figure is a structured-data violation.

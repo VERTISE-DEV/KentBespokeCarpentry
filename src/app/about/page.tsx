@@ -7,16 +7,16 @@ import { SERVICES } from "@/lib/site";
 import heroImage from "../../../public/assets/staircase.jpg";
 
 export const metadata: Metadata = {
-  title: "About: a small Kent carpentry team that covers every stage",
-  description: "Kent Bespoke Carpentry is a small team covering first fix, second fix and bespoke joinery across Kent. Fixed quotes, one point of contact, and a finish you can live with.",
+  title: "About: fifteen years of carpentry and joinery in Kent",
+  description: "Kent Bespoke Carpentry has covered first fix, second fix and bespoke joinery across Kent for fifteen years. Fully insured, fixed quotes and one point of contact throughout.",
   alternates: { canonical: "/about" },
   openGraph: { title: "About Kent Bespoke Carpentry", url: "/about" },
 };
 
 const APPROACH = [
-  { n: "01", title: "Fixed, honest quotes", body: "Drawn and priced before we start. The number you agree is the number you pay." },
-  { n: "02", title: "One team, every stage", body: "The carpenter who measures is the carpenter who builds and fits. First fix, second fix and bespoke, without three separate trades to book." },
-  { n: "03", title: "Finished properly", body: "Clean lines, tight joins, tidy site. We walk it round with you before we sign it off." },
+  { n: "01", title: "Surveyed and fixed-priced", body: "Every project is measured and drawn before it is priced, and the quoted figure is the figure you pay." },
+  { n: "02", title: "One team, every stage", body: "First fix, second fix and bespoke joinery handled by the same carpenters, without three separate trades to co-ordinate." },
+  { n: "03", title: "Finished and handed over", body: "Consistent joints, clean lines and a tidy site, with a final inspection walked through before the project is signed off." },
 ];
 
 export default function AboutPage() {
@@ -28,7 +28,7 @@ export default function AboutPage() {
         alt="Softwood staircase with glass balustrade, mid-installation"
         eyebrow="About us"
         objectPositionMobile="55% 55%"
-        sub="A small Kent team covering every carpentry stage of a job."
+        sub="Fifteen years of carpentry and joinery across Kent."
         objectPosition="50% 50%"
         words={[
           { text: "Built on", delay: 0.2, br: true },
@@ -38,10 +38,10 @@ export default function AboutPage() {
 
       <section className="section" aria-labelledby="story-h">
         <div className="cols" style={{ gap: "clamp(24px,4vw,64px)", alignItems: "start" }}>
-          <h2 id="story-h" className="h-md" data-reveal="">A small Kent team<br /><span className="light">that does the whole job.</span></h2>
+          <h2 id="story-h" className="h-md" data-reveal="">Fifteen years of carpentry,<br /><span className="light">start to finish.</span></h2>
           <div className="body-lg" style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-            <p className="d1" data-reveal="">We take the carpentry on a job from end to end. The first fix nobody ever sees, the second fix everybody does, and the bespoke pieces that make a room yours. Same hands on all three.</p>
-            <p className="d2" data-reveal="">No hand-offs, no sub-contractor surprises, one number to call. We work for homeowners directly, and alongside builders and main contractors on bigger projects, anywhere in Kent.</p>
+            <p className="d1" data-reveal="">Kent Bespoke Carpentry has worked across the county for fifteen years, taking the carpentry on a project from end to end: the structural first fix, the second fix that finishes a room, and the bespoke joinery in between.</p>
+            <p className="d2" data-reveal="">The carpenter who measures a project is the carpenter who builds and installs it, so there are no hand-offs and one point of contact throughout. We work directly for homeowners and alongside builders and main contractors on larger projects, and we are fully insured.</p>
           </div>
         </div>
       </section>

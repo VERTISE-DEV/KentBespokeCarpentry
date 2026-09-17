@@ -5,7 +5,7 @@ import { NAP } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact: book a free visit or get a quote",
-  description: "Tell Kent Bespoke Carpentry about your carpentry job, first fix, second fix or bespoke. Call 07494 280614, email sales@kentbespokecarpentry.co.uk, reply within one working day.",
+  description: "Tell Kent Bespoke Carpentry about your project, whether first fix, second fix or bespoke joinery. Call 07494 280614 or email sales@kentbespokecarpentry.co.uk for a reply within one working day.",
   alternates: { canonical: "/contact" },
   openGraph: { title: "Contact Kent Bespoke Carpentry", url: "/contact" },
 };

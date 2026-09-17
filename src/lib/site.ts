@@ -39,6 +39,13 @@ export const NAP = {
  * JSON-LD aggregateRating is only emitted when both are present, because Google treats an
  * invented review count as a structured-data violation.
  */
+/** Verified credentials. Confirmed by the client: 15 years trading, public liability insured. */
+export const CREDENTIALS = {
+  years: 15,
+  yearsWord: "Fifteen",
+  insurance: "Public liability insured",
+} as const;
+
 export const CHECKATRADE = {
   url: "https://www.checkatrade.com/trades/kentbespokecarpentryltd",
   label: "5 star reviews on Checkatrade",
@@ -94,10 +101,10 @@ export const PROJECTS: Project[] = [
 export type Service = { title: string; body: string; bg: string; fg: string };
 
 export const SERVICES: Service[] = [
-  { title: "First fix carpentry", body: "The structural work that happens before the plasterer arrives: stud partitions, floor joists, roof carcassing, noggins, door linings and window boards. Get this stage square and level and every trade that follows has an easier job.", bg: "#0e2140", fg: "#fff" },
-  { title: "Second fix carpentry", body: "Everything you see once the walls are finished: doors hung so they close first time, skirting and architrave with mitres that actually meet, stair parts, loft hatches and kitchen fitting.", bg: "#fff", fg: "#0a0a0a" },
-  { title: "Media walls & fireplaces", body: "Recessed TV and fireplace walls with lit display niches, hidden cabling and painted or veneered finishes, built to suit the room rather than the other way round.", bg: "#f2f2f0", fg: "#0a0a0a" },
-  { title: "Staircases & balustrades", body: "New softwood or hardwood flights, replacement treads and risers, and glass or timber balustrades, measured on site and made to fit awkward landings.", bg: "#fff", fg: "#0a0a0a" },
-  { title: "Fitted wardrobes & alcoves", body: "Floor-to-ceiling wardrobes, alcove units and under-stair storage, designed around what you actually need to put in them.", bg: "#0a0a0a", fg: "#fff" },
-  { title: "Pergolas, decking & garden structures", body: "Structural timber pergolas, covered outdoor kitchens and bars, decking and slatted screens. Treated timber, proper footings, built to stay square.", bg: "#fff", fg: "#0a0a0a" },
+  { title: "First fix carpentry", body: "The structural carpentry that goes in before plastering: stud partitions, floor joists, roof carcassing, noggins, door linings and window boards. Getting this stage square and level makes every trade that follows more straightforward.", bg: "#0e2140", fg: "#fff" },
+  { title: "Second fix carpentry", body: "Doors hung and adjusted to close cleanly, skirting and architrave cut and mitred to a consistent line, stair parts, loft hatches and kitchen installation. The stage that determines how finished a room actually looks.", bg: "#fff", fg: "#0a0a0a" },
+  { title: "Media walls & fireplaces", body: "Recessed television and fireplace walls with lit display niches, concealed cabling and painted or veneered finishes, designed around the proportions of the room rather than a standard unit size.", bg: "#f2f2f0", fg: "#0a0a0a" },
+  { title: "Staircases & balustrades", body: "New softwood and hardwood flights, replacement treads and risers, and glass or timber balustrades, measured on site and made to suit awkward landings and existing openings.", bg: "#fff", fg: "#0a0a0a" },
+  { title: "Fitted wardrobes & alcoves", body: "Floor-to-ceiling wardrobes, alcove units and under-stair storage, designed around what needs to go inside them rather than around a standard carcass.", bg: "#0a0a0a", fg: "#fff" },
+  { title: "Pergolas, decking & garden structures", body: "Structural timber pergolas, covered outdoor kitchens and bars, decking and slatted screens. Treated timber on properly set footings, built to stay square through a Kent winter.", bg: "#fff", fg: "#0a0a0a" },
 ];
