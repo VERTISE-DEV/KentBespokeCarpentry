@@ -3,21 +3,21 @@ import Link from "next/link";
 
 const STEPS = [
   {
-    n: "01 / Design", tone: "slide--navy", src: "/assets/media-wall.jpg", alt: "Bespoke media wall with lit display niches",
-    title: "Measured, drawn and agreed before we cut a thing.",
-    copy: "Every job starts with a site visit and a drawing. We work through proportions, materials and finish with you, so the quote is fixed and there are no surprises later.",
-    cta: { href: "/about", label: "How we work", cls: "pill pill--outline-white-soft" },
+    n: "01 / First fix", tone: "slide--navy", src: "/assets/pergola-octagon.jpg", alt: "Timber frame under construction before the finishing trades arrive",
+    title: "The carpentry that disappears behind the walls.",
+    copy: "Stud partitions, floor joists, roof carcassing, door linings and window boards. Nobody sees first fix once the plaster is on, which is exactly why it has to be square, level and right first time.",
+    cta: { href: "/about", label: "What we cover", cls: "pill pill--outline-white-soft" },
   },
   {
-    n: "02 / Build", tone: "slide--white", src: "/assets/pergola-octagon.jpg", alt: "Octagonal pergola frame under construction",
-    title: "Made by carpenters who care about the joins nobody sees.",
-    copy: "Structural timber, hardwood or painted MDF: we build in the workshop where we can and on site where we must, to the same standard either way.",
-    cta: { href: "/projects", label: "See recent builds", cls: "pill pill--navy" },
+    n: "02 / Second fix", tone: "slide--white", src: "/assets/staircase.jpg", alt: "Staircase and balustrade being fitted during second fix carpentry",
+    title: "The part you see every day, finished properly.",
+    copy: "Doors hung so they close first time, skirting and architrave with mitres that meet, stair parts, loft hatches and kitchen fitting. Clean lines, tight joins, nothing left to snag.",
+    cta: { href: "/projects", label: "See recent work", cls: "pill pill--navy" },
   },
   {
-    n: "03 / Install", tone: "slide--black", src: "/assets/fireplace-wall.jpg", alt: "Finished fireplace media wall with lit alcoves",
-    title: "Fitted cleanly, finished properly, left ready to live with.",
-    copy: "Tidy site, protected floors, and a final walk-round with you before we call it done. We don't leave until it's right.",
+    n: "03 / Bespoke", tone: "slide--black", src: "/assets/fireplace-wall.jpg", alt: "Finished bespoke fireplace media wall with lit alcoves",
+    title: "One-off pieces, made to fit the room you have.",
+    copy: "Media walls, fitted wardrobes, alcove units, staircases and garden structures. Drawn around your space and your measurements, not ordered from a catalogue and made to fit.",
     cta: { href: "/contact", label: "Get a quote", cls: "pill pill--white-on-black" },
   },
 ];
@@ -25,13 +25,13 @@ const STEPS = [
 const IMG_SIZES = "(min-width: 768px) 50vw, 100vw";
 
 /**
- * Design › Build › Install. In browsers with scroll-driven animation support this is a sticky
+ * First fix › Second fix › Bespoke. In browsers with scroll-driven animation support this is a sticky
  * counter-scroll (side by side on desktop, image-over-text on mobile; see globals.css).
  * Everywhere else it is three stacked cards, each with its own image.
  */
 export function Showcase() {
   return (
-    <section className="showcase" aria-label="How we work: design, build, install">
+    <section className="showcase" aria-label="What we do: first fix, second fix and bespoke joinery">
       <div className="showcase__sticky">
         <div className="showcase__wrap">
           <div className="showcase__col showcase__col--left">

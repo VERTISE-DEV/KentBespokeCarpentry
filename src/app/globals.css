@@ -136,7 +136,8 @@ img { display: block; }
 .hero__img-wrap { position: absolute; inset: 0; overflow: hidden; }
 .hero__card[data-loaded="true"] .hero__img-wrap { animation: kbcScale 2s var(--ease-out) both; }
 .hero__img-wrap--fast { animation-duration: 1.5s; }
-.hero__img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; }
+.hero__img { width: 100%; height: 100%; object-fit: cover; object-position: var(--obj, 50% 42%); background-size: cover; background-position: center; }
+.hero__img[data-ready="true"] { background-image: none !important; }
 .hero__tint { position: absolute; inset: 0; background: rgba(14,33,64,0.42); }
 .hero__tint--45 { background: rgba(14,33,64,0.45); }
 .hero__content { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 28px; padding: 24px; }
@@ -147,6 +148,10 @@ img { display: block; }
 .hero__h1 { max-width: 14ch; }
 .hero__word { display: inline-block; }
 .hero__card[data-loaded="true"] .hero__word { animation: kbcWord 0.8s var(--ease-soft) both; }
+.hero__sub { font-size: 16px; line-height: 1.45; color: rgba(255,255,255,0.88); }
+.hero__trust { list-style: none; margin: 0; padding: 0; }
+.hero__card[data-loaded="true"] .hero__sub { animation: kbcUp 1s var(--ease-out) 1.15s both; }
+.hero__card[data-loaded="true"] .hero__trust { animation: kbcUp 1s var(--ease-out) 1.45s both; }
 .hero__ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 .hero__card[data-loaded="true"] .hero__ctas { animation: kbcUp 1s var(--ease-out) 1.3s both; }
 .hero__scroll { position: absolute; bottom: 0; left: 0; right: 0; display: flex; justify-content: center; }
@@ -364,6 +369,7 @@ img { display: block; }
   }
 }
 @media (min-width: 768px) {
+  .hide-d { display: none; }
   .modal { align-items: center; padding: 24px; }
   .modal__card { border-radius: 16px; }
 }
@@ -373,7 +379,50 @@ img { display: block; }
   .cols, .cols-3 { grid-template-columns: 1fr; }
   .row { flex-direction: column; }
   .hide-m { display: none; }
-  .hero { height: 95svh; }
+  /* ---- Mobile hero ----
+     Portrait phones get a different composition from desktop: the photo keeps the top two
+     thirds, and the copy sits in the lower third over a gradient scrim so it is always
+     legible regardless of what the photo is doing behind it. 88svh leaves a sliver of the
+     next section visible, which tells the visitor there is more below. */
+  .hero { height: 88svh; min-height: 560px; padding: 84px 16px 12px; }
+  /* The card is narrower than every source photo, so `cover` fits by height and the whole
+     image is shown: object-position can only pan horizontally here. Oversizing the image and
+     anchoring it to the bottom of the card crops the top instead, which is both the better
+     mobile composition (frame filled with the build, not sky) and where the supplied photos
+     carry a baked-in logo watermark. !important is needed because next/image writes
+     `height:100%;inset:0` as an inline style on the element. */
+  .hero__img { object-position: var(--obj-m, var(--obj, 50% 42%)); }
+  .hero__tint {
+    background: linear-gradient(to bottom,
+      rgba(14,33,64,0.28) 0%,
+      rgba(14,33,64,0.14) 26%,
+      rgba(10,18,34,0.62) 56%,
+      rgba(10,18,34,0.90) 100%);
+  }
+  .hero__content {
+    justify-content: flex-end; align-items: flex-start; text-align: left;
+    gap: 14px; padding: 24px 20px 26px;
+    text-shadow: 0 1px 14px rgba(10,18,34,0.45);
+  }
+  .hero__content .eyebrow { font-size: 11px; letter-spacing: 0.2em; opacity: 0.92; }
+  .hero__h1 { font-size: clamp(38px, 11.2vw, 52px); line-height: 0.98; max-width: 11ch; }
+  .hero__sub { max-width: 30ch; }
+  .hero__ctas { width: 100%; flex-direction: column; gap: 10px; margin-top: 2px; }
+  .hero__ctas > * { width: 100%; }
+  .hero__trust {
+    display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: 2px;
+    font-size: 12px; letter-spacing: 0.06em; color: rgba(255,255,255,0.8);
+  }
+  .hero__trust li + li::before { content: "\00B7"; margin-right: 8px; opacity: 0.6; }
+
+  /* Short phones (SE, older Androids): tighten the stack so the photo still reads. */
+  @media (max-height: 720px) {
+    .hero { height: 92svh; min-height: 0; padding-top: 80px; }
+    .hero__content { gap: 10px; padding: 20px 20px 22px; }
+    .hero__h1 { font-size: clamp(32px, 9.6vw, 40px); }
+    .hero__sub { font-size: 15px; }
+    .hero__ctas > * { min-height: 46px; }
+  }
   .menu__link { font-size: 40px; }
   .menu__inner { justify-content: flex-start; gap: 32px; padding-top: 92px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
   .menu__meta { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; padding-top: 24px; }

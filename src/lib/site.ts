@@ -37,11 +37,22 @@ export const NAVY = "#0e2140";
 export const BLACK = "#0a0a0a";
 
 export const OFFERS = [
-  "Bespoke media walls",
+  "First fix carpentry",
+  "Second fix carpentry",
+  "Bespoke media walls and fireplaces",
   "Staircases and balustrades",
-  "Pergolas and garden rooms",
   "Fitted wardrobes and alcoves",
-  "Doors, skirting and architrave",
+  "Pergolas, decking and garden structures",
+] as const;
+
+/**
+ * Towns used for `areaServed` in the JSON-LD only, never shown on the page.
+ * Trim this to the areas the business actually travels to.
+ */
+export const AREAS_SERVED = [
+  "Maidstone", "Ashford", "Canterbury", "Sittingbourne", "Faversham",
+  "Tonbridge", "Tunbridge Wells", "Sevenoaks", "Gravesend", "Dartford",
+  "Rochester", "Chatham", "Gillingham", "Whitstable", "Herne Bay",
 ] as const;
 
 export type Project = {
@@ -67,9 +78,10 @@ export const PROJECTS: Project[] = [
 export type Service = { title: string; body: string; bg: string; fg: string };
 
 export const SERVICES: Service[] = [
-  { title: "Media walls", body: "Recessed TV and fireplace walls with lit display niches, hidden cabling and painted or veneered finishes, built to suit the room rather than the other way round.", bg: "#0e2140", fg: "#fff" },
+  { title: "First fix carpentry", body: "The structural work that happens before the plasterer arrives: stud partitions, floor joists, roof carcassing, noggins, door linings and window boards. Get this stage square and level and every trade that follows has an easier job.", bg: "#0e2140", fg: "#fff" },
+  { title: "Second fix carpentry", body: "Everything you see once the walls are finished: doors hung so they close first time, skirting and architrave with mitres that actually meet, stair parts, loft hatches and kitchen fitting.", bg: "#fff", fg: "#0a0a0a" },
+  { title: "Media walls & fireplaces", body: "Recessed TV and fireplace walls with lit display niches, hidden cabling and painted or veneered finishes, built to suit the room rather than the other way round.", bg: "#f2f2f0", fg: "#0a0a0a" },
   { title: "Staircases & balustrades", body: "New softwood or hardwood flights, replacement treads and risers, and glass or timber balustrades, measured on site and made to fit awkward landings.", bg: "#fff", fg: "#0a0a0a" },
-  { title: "Pergolas & garden rooms", body: "Structural timber pergolas, covered outdoor kitchens and bars, decking and slatted screens. Treated timber, proper footings, built to stay square.", bg: "#f2f2f0", fg: "#0a0a0a" },
-  { title: "Fitted wardrobes & alcoves", body: "Floor-to-ceiling wardrobes, alcove units and under-stair storage designed around what you actually need to put in them.", bg: "#fff", fg: "#0a0a0a" },
-  { title: "Doors, skirting & architrave", body: "Second-fix carpentry done properly: hung doors that close, mitres that meet, and mouldings that match the rest of the house.", bg: "#0a0a0a", fg: "#fff" },
+  { title: "Fitted wardrobes & alcoves", body: "Floor-to-ceiling wardrobes, alcove units and under-stair storage, designed around what you actually need to put in them.", bg: "#0a0a0a", fg: "#fff" },
+  { title: "Pergolas, decking & garden structures", body: "Structural timber pergolas, covered outdoor kitchens and bars, decking and slatted screens. Treated timber, proper footings, built to stay square.", bg: "#fff", fg: "#0a0a0a" },
 ];
