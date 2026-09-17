@@ -6,8 +6,8 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { Showcase } from "@/components/Showcase";
 import { Checkatrade } from "@/components/Checkatrade";
 import { CREDENTIALS, PROJECTS } from "@/lib/site";
-import heroImage from "../../public/assets/pergola-deck.jpg";
-import heroImageMobile from "../../public/assets/garden-bar.jpg";
+import heroImage from "../../public/assets/loft-roof-frame.jpg";
+import heroImageMobile from "../../public/assets/roof-ridge.webp";
 
 export const metadata: Metadata = {
   title: { absolute: "Carpentry & Joinery in Kent | First Fix, Second Fix & Bespoke" },
@@ -22,10 +22,11 @@ export default function HomePage() {
       <Hero
         variant="home"
         src={heroImage}
-        alt="Timber pergola and decking built by Kent Bespoke Carpentry"
+        alt="Loft conversion floor and rafters framed up by Kent Bespoke Carpentry"
         eyebrow="Carpentry and joinery across Kent"
         mobileSrc={heroImageMobile}
-        objectPositionMobile="50% 38%"
+        objectPosition="50% 58%"
+        objectPositionMobile="50% 76%"
         sub="Fifteen years of first fix, second fix and bespoke joinery across Kent."
         reviews
         trust={["15 years", "Family run", "Fixed quotes"]}

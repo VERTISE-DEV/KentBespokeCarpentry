@@ -100,6 +100,9 @@ export const PROJECTS: Project[] = [
   { slug: "covered-garden-bar", sector: "residential", src: "/assets/garden-bar.jpg", alt: "Timber garden bar with hatch and slatted front", type: "Garden structure", title: "Covered garden bar", num: "04", width: 1536, height: 2048 },
   { slug: "octagonal-pergola", sector: "residential", src: "/assets/pergola-octagon.jpg", alt: "Octagonal pergola frame over composite decking", type: "Garden structure", title: "Octagonal pergola", num: "05", width: 1080, height: 1440 },
   { slug: "fireplace-alcove-wall", sector: "residential", src: "/assets/fireplace-wall.jpg", alt: "Fireplace media wall with lit alcoves and cupboards", type: "Media wall", title: "Fireplace & alcove wall", num: "06", width: 942, height: 677 },
+  { slug: "cut-roof-extension", sector: "residential", src: "/assets/cut-roof-extension.jpg", alt: "Cut roof rafters framed off a blockwork extension beside a tile-hung elevation", type: "First fix", title: "Cut roof over extension", num: "07", width: 1206, height: 1605 },
+  { slug: "lean-to-rafters", sector: "residential", src: "/assets/extension-rafters.jpg", alt: "Lean-to extension rafters set off a wall plate against a tile-hung elevation", type: "First fix", title: "Lean-to extension rafters", num: "08", width: 1206, height: 1606 },
+  { slug: "cut-roof-ridge", sector: "residential", src: "/assets/roof-ridge.webp", alt: "Ridge of a newly cut roof with rafters and purlins in place", type: "First fix", title: "New build cut roof", num: "09", width: 920, height: 2000 },
 ];
 
 export type Service = { title: string; body: string; bg: string; fg: string };
