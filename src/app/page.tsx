@@ -6,7 +6,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { Showcase } from "@/components/Showcase";
 import { Checkatrade } from "@/components/Checkatrade";
 import { CREDENTIALS, PROJECTS } from "@/lib/site";
-import heroImage from "../../public/assets/roof-ridge.webp";
+import heroImage from "../../public/assets/roof-ridge.jpg";
 
 export const metadata: Metadata = {
   title: { absolute: "Carpentry & Joinery in Kent | First Fix, Second Fix & Bespoke" },

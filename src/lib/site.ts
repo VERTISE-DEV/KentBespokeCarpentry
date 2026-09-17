@@ -102,7 +102,7 @@ export const PROJECTS: Project[] = [
   { slug: "fireplace-alcove-wall", sector: "residential", src: "/assets/fireplace-wall.jpg", alt: "Fireplace media wall with lit alcoves and cupboards", type: "Media wall", title: "Fireplace & alcove wall", num: "06", width: 942, height: 677 },
   { slug: "loft-roof-frame", sector: "residential", src: "/assets/loft-roof-frame.jpg", alt: "Loft conversion floor joists and rafters framed up over a terrace", type: "First fix", title: "Loft conversion frame", num: "07", width: 1206, height: 891 },
   { slug: "cut-roof-extension", sector: "residential", src: "/assets/cut-roof-extension.jpg", alt: "Cut roof rafters framed off a blockwork extension beside a tile-hung elevation", type: "First fix", title: "Cut roof over extension", num: "08", width: 1206, height: 1605 },
-  { slug: "cut-roof-ridge", sector: "residential", src: "/assets/roof-ridge.webp", alt: "Ridge of a newly cut roof with rafters and purlins in place", type: "First fix", title: "New build cut roof", num: "09", width: 920, height: 2000 },
+  { slug: "cut-roof-ridge", sector: "residential", src: "/assets/roof-ridge.jpg", alt: "Ridge of a newly cut roof with rafters and purlins in place", type: "First fix", title: "New build cut roof", num: "09", width: 941, height: 2048 },
 ];
 
 export type Service = { title: string; body: string; bg: string; fg: string };
